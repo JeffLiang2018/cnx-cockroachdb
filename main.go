@@ -1,4 +1,4 @@
-package cnx_cockroachdb
+package main
 import "fmt"
 
 //import "gorm.io/gen"
