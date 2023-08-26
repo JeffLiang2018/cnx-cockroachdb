@@ -13,7 +13,7 @@ func main() {
 	user := "pvos_dia_db_rw"
 	password := "c0f47960-9c78-4039-9760-c0ff390b3259_pvos_dia_db_rw"
 	database := "pvos_dia_db"
-	dns := fmt.Sprintf("host=%s user=%s password=%s database=%s port=%d sslmode=enable", host, user, password, database, port)
+	dns := fmt.Sprintf("host=%s user=%s password=%s database=%s port=%d sslmode=disable", host, user, password, database, port)
 	db, err := gorm.Open(postgres.Open(dns), &gorm.Config{})
 	if err != nil {
 		panic(fmt.Sprintf("error happened when creating CockroachDB connection, err: %v", err))
