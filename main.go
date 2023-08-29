@@ -16,7 +16,7 @@ func main() {
 	sslrootcert := "./certs/ca.crt"
 	sslcert := "./certs/client.root.crt"
 	sslkey := "./certs/client.root.key"
-	dns := fmt.Sprintf("host=%s user=%s password=%s database=%s port=%d sslmode=require sslrootcert=%s sslcert=%s sslkey=%s",
+	dns := fmt.Sprintf("host=%s user=%s password=%s database=%s port=%d sslmode=verify-full sslrootcert=%s sslcert=%s sslkey=%s",
 		host, user, password, database, port, sslrootcert, sslcert, sslkey)
 	db, err := gorm.Open(postgres.Open(dns), &gorm.Config{})
 	if err != nil {
